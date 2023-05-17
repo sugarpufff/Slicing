@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react';
 import { Button, Gap} from '../../Components';
+import { NavDesc, NavHome } from '../../assets/icons';
 
 const Home = ({navigation}) => {
   return (
@@ -41,6 +42,10 @@ const Home = ({navigation}) => {
     <View style={styles.navigationMenu}>
 
     </View>
+    <View style={styles.HomeNav}>
+      <NavHome/>
+      <NavDesc/>
+    </View>
     </View>
   )
 }
@@ -49,7 +54,16 @@ export default Home;
 
 const styles = StyleSheet.create({
       page:{
+        
         flex: 1,
+      },
+      HomeNav:{
+        marginTop:25,
+        backgroundColor:'white',
+        justifyContent:'space-between',
+        flexDirection:'row',
+        paddingVertical:15,
+        paddingHorizontal:80,
       },
       container:{
         flexDirection: 'row',
